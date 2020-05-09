@@ -1,3 +1,4 @@
 To install and run the project:
+- $ chmod +x install.sh
 - run the install.sh script
 - On your browser : http://127.0.0.1:8000/bill/login
