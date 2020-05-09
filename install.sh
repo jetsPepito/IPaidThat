@@ -1,5 +1,5 @@
+mkdir env
+python3 -m venv env
 source env/bin/activate
-cd env
-pip install -r ../requirements.txt
-cd ..
+pip install -r ./requirements.txt
 python manage.py runserver
