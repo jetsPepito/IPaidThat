@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<!-- templates/registration/login.html -->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body class="bg-dark text-white">
+<div class="container" style="">
+    <div class="h-25"></div>
+        <h1 class="text-center">Login</h1>
+    <br>
+    <div class="text-center">
+    <form method="post" action="{% url 'bill:login' %}">
+        <div class="form-group">
+        {% csrf_token %}
+        {{ form.as_p }}
+        </div>
+        {% if error == "error" %}
+            <p>Try with an other mail or password</p>
+        {%  endif %}
+        <button type="submit" class="btn btn-info ">Login</button>
+    </form>
+        </div>
+</div>
+</body>

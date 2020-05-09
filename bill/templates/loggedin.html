@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<body class="bg-dark text-white">
+<div class="container">
+{% if bills_list %}
+    {% for el in bills_list %}
+        <li class="list-group-item list-group-item-action">
+        <ul>
+            <li class="list-group-item list-group-item-dark">{{ el.invoice_number }}</li>
+            <li class="list-group-item list-group-item-dark">{{ el.date }}</li>
+            <li class="list-group-item list-group-item-dark">{{ el.client_name }}</li>
+            <li class="list-group-item list-group-item-dark">{{ el.total_ttc }}</li>
+            <li class="list-group-item list-group-item-dark">{{ el.total_vat }}</li>
+        </ul>
+        </li>
+    {% endfor %}
+{% else %}
+    <p class="p-0">Nothing to show.</p>
+{% endif %}
+</div>
+</body>
