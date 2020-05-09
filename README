@@ -1,0 +1,4 @@
+To install and run the project:
+- On your shell : $ pip install -r requirements.txt
+- $ python manage.py runserver
+- On your browser : http://127.0.0.1:8000/bill/login
